@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<style>
+    body{margin:0px; padding:0px;}
+    
+    .header{position: fixed; background-color: white; width: 100%;}
+    .header .headerBox{position: relative;height: 160px;}
+    .header .headerInner{display: flex; width: 100%; padding: 0 5%; box-sizing: border-box;}
+    .header .headerInner > div{display: inline-block; width: 50%;vertical-align: middle;box-sizing: border-box;}
+    .header .headerLogo{padding:3.5% 0}
+    .header .headerLogo > img{width: 100%;}
+    .header .headerGNB{text-align: right;}
+    .header .headerGNB > img{width: 20%; padding: 11% 0px;}
+    
+    .gnbOuter{position: absolute; background-color: rgba(0,0,0,0.6);
+ width: 100%; height: 1000%; left: 0; top:160px;text-align: right;}
+    .gnbOuter .gnbinner{width: 50%; height: 100%; background-color: white; display: inline-block; text-align: left;}
+    .gnbOuter .gnbinner .gnbContent{}
+    .gnbOuter .gnbinner .gnbContent > div{display: inline-block;width: 100%;
+    border-bottom: 1px solid #c8c8c8;}
+    .gnbOuter .gnbinner .gnbContent > div > p{padding:2% 0 2% 10%;font-size: 30px; font-weight: 500; color: #282828; cursor: pointer;}
+    .gnbOuter .gnbinner .gnbContent > div:hover p{color:#1ea96e;}
+    .bannerBox{width:100%}
+    .bannerBox>img{width: 100%;}
+    
+</style>
+<script>
+    
+    function gnbControl(menu){
+        if(menu=='intro'){
+            alert('intro');
+            $('.gnbOuter').hide();
+        }
+    }
+
+    
+</script>
+</head>
+<body>
+   <div class="header">
+      <div class="headerBox">
+          <div class="headerInner">
+               <div class="headerLogo"><img src="goodDriveLogo.png"></div>
+               <div class="headerGNB">
+                   <img src="gnb.png">
+                   <div class="gnbOuter">
+                       <div class="gnbinner">
+                           <div class="gnbContent">
+                                <div class="" onclick="gnbControl('intro')">
+                                    <p>운전연수안내</p>
+                                </div>
+                                <div class="">
+                                    <p>운전연수지역</p>
+                                </div>
+                                <div class="">
+                                    <p>연수시간표</p>
+                                </div>
+                                <div class="">
+                                    <p>연수비용안내</p>
+                                </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </div>
+   <div class="mainPage">
+       <div class="bannerBox">
+           <img src="mainBanner_01.jpg">
+
+       </div>
+   </div>
+    
+</body>
